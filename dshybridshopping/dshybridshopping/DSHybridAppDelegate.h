@@ -14,6 +14,11 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, strong) UIWindow *window;
 
+
+/**
+    - 앱을 종료하기 위한 메소드
+    - parameter 없음
+ */
 - (void)AppExit;
 
 @end

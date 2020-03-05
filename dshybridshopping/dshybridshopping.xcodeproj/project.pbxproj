@@ -31,6 +31,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3ACC5786240F3A3A002C955B /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		3ACC5787240F3A3A002C955B /* CommonView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CommonView;
+			sourceTree = "<group>";
+		};
 		3AE8EBED240CD0F20068CACF = {
 			isa = PBXGroup;
 			children = (
@@ -50,6 +64,8 @@
 		3AE8EBF9240CD0F20068CACF /* dshybridshopping */ = {
 			isa = PBXGroup;
 			children = (
+				3ACC5787240F3A3A002C955B /* CommonView */,
+				3ACC5786240F3A3A002C955B /* Controller */,
 				3AE8EC02240CD18C0068CACF /* DSHybridAppDelegate.h */,
 				3AE8EC03240CD18C0068CACF /* DSHybridAppDelegate.m */,
 				3AE8EBFA240CD0F20068CACF /* dshybridshopping.h */,
