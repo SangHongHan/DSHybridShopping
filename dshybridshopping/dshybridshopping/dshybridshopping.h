@@ -18,6 +18,19 @@ FOUNDATION_EXPORT const unsigned char dshybridshoppingVersionString[];
 
 
 #import "DSHybridAppDelegate.h"
+#import "SDKInfo.h"
+#import "SettingInfo.h"
+
+//Notification Constant
+#define kLogoutNotification @"LogoutNotification"
+#define kLoginNotification @"LoginNotification"
+#define kShowAlarmNotification @"ShowAlarmNotification"
+
+// API List
+#define API_INTRO @"/app/splashImg.action"
+#define API_VERSIONCHECK @"/app/versionCheck.action"
+
+//기본 Define
 
 #define kFrameworkName                  @"DSHybridShopping 프레임워크"
 #define kFramworkBundle                 @"com.directionsoft.framework.dshybridshopping"
@@ -28,3 +41,12 @@ FOUNDATION_EXPORT const unsigned char dshybridshoppingVersionString[];
 #define kScreenBoundsHeight             [[UIScreen mainScreen] bounds].size.height
 
 #define UserDefaults                    [NSUserDefaults standardUserDefaults]
+
+#define StartY  [[UIApplication sharedApplication] statusBarFrame].size.height
+#define     UIColorFromRGB(rgbValue)        [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0  \
+                                                            green:((float)((rgbValue & 0xFF00) >> 8))/255.0     \
+                                                            blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
+
+#define     UIColorFromRGBA(rgbValue, a)        [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0  \
+                                                            green:((float)((rgbValue & 0xFF00) >> 8))/255.0     \
+                                                            blue:((float)(rgbValue & 0xFF))/255.0 alpha:a]

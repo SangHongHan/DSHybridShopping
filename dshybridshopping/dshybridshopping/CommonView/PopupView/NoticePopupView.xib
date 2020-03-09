@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="NoticePopupView">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view alpha="0.59999999999999998" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SCg-U9-jy6" userLabel="dimmedView">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="F8i-Ir-E6V" userLabel="contentView">
+                    <rect key="frame" x="37.5" y="203" width="300" height="261"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XLt-mC-dXn" userLabel="DescView">
+                            <rect key="frame" x="0.0" y="0.0" width="300" height="261"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dth-t8-grT">
+                                    <rect key="frame" x="260" y="15" width="25" height="25"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="25" id="0Tt-L3-qL4"/>
+                                        <constraint firstAttribute="width" constant="25" id="677-cc-jhw"/>
+                                    </constraints>
+                                    <state key="normal" title="Button" image="btnCloseC"/>
+                                    <connections>
+                                        <action selector="didTouchClosePopoup:" destination="iN0-l3-epB" eventType="touchUpInside" id="t1y-ve-c7W"/>
+                                    </connections>
+                                </button>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="알림 수신 여부 안내" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x2I-SC-XGW" userLabel="lbDesc1">
+                                    <rect key="frame" x="59" y="50" width="182" height="57"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="57" id="cmY-0M-XtA"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2020년 12월 10일 12시 00분 00초 갤러리아몰 앱 알림(광고성) 수신 동의가 정상적으로 처리 되었습니다." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fco-aE-uch" userLabel="lbDesc2">
+                                    <rect key="frame" x="10" y="107" width="280" height="54"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="* 알림설정 변경 &gt; 앱설정 &gt; 쇼핑 알림 받기" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pUN-iB-tTz" userLabel="lbDesc3">
+                                    <rect key="frame" x="32" y="171" width="236.5" height="40"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="40" id="7g2-8X-afk"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstItem="x2I-SC-XGW" firstAttribute="top" secondItem="XLt-mC-dXn" secondAttribute="top" constant="50" id="2Dl-iW-mKC"/>
+                                <constraint firstItem="fco-aE-uch" firstAttribute="top" secondItem="x2I-SC-XGW" secondAttribute="bottom" id="Fcx-c1-SFa"/>
+                                <constraint firstItem="x2I-SC-XGW" firstAttribute="centerX" secondItem="XLt-mC-dXn" secondAttribute="centerX" id="GUU-NW-asi"/>
+                                <constraint firstAttribute="trailing" secondItem="Dth-t8-grT" secondAttribute="trailing" constant="15" id="Ge7-0H-VUQ"/>
+                                <constraint firstAttribute="bottom" secondItem="pUN-iB-tTz" secondAttribute="bottom" constant="50" id="Izh-iA-Rlz"/>
+                                <constraint firstItem="Dth-t8-grT" firstAttribute="top" secondItem="XLt-mC-dXn" secondAttribute="top" constant="15" id="PvQ-nI-GAq"/>
+                                <constraint firstItem="fco-aE-uch" firstAttribute="leading" secondItem="XLt-mC-dXn" secondAttribute="leading" constant="10" id="V2n-xd-Mkk"/>
+                                <constraint firstItem="pUN-iB-tTz" firstAttribute="top" secondItem="fco-aE-uch" secondAttribute="bottom" constant="10" id="nXj-mo-YWa"/>
+                                <constraint firstItem="fco-aE-uch" firstAttribute="centerX" secondItem="XLt-mC-dXn" secondAttribute="centerX" id="nrL-g5-xon"/>
+                                <constraint firstAttribute="trailing" secondItem="fco-aE-uch" secondAttribute="trailing" constant="10" id="tfe-Pv-SRu"/>
+                                <constraint firstItem="pUN-iB-tTz" firstAttribute="centerX" secondItem="XLt-mC-dXn" secondAttribute="centerX" id="xC7-Rv-YHb"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="XLt-mC-dXn" firstAttribute="leading" secondItem="F8i-Ir-E6V" secondAttribute="leading" id="BxE-C0-HYn"/>
+                        <constraint firstAttribute="trailing" secondItem="XLt-mC-dXn" secondAttribute="trailing" id="DMR-yO-znb"/>
+                        <constraint firstAttribute="bottom" secondItem="XLt-mC-dXn" secondAttribute="bottom" id="Iw6-eO-1JM"/>
+                        <constraint firstAttribute="width" constant="300" id="R0I-a9-tb0"/>
+                        <constraint firstItem="XLt-mC-dXn" firstAttribute="top" secondItem="F8i-Ir-E6V" secondAttribute="top" id="iY3-Ug-ODx"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="F8i-Ir-E6V" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="Jb0-vj-CcI"/>
+                <constraint firstAttribute="trailing" secondItem="SCg-U9-jy6" secondAttribute="trailing" id="QZR-6s-MIf"/>
+                <constraint firstAttribute="bottom" secondItem="SCg-U9-jy6" secondAttribute="bottom" id="YBR-34-9HX"/>
+                <constraint firstItem="SCg-U9-jy6" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="cS4-gf-Sse"/>
+                <constraint firstItem="F8i-Ir-E6V" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="etn-5F-kZn"/>
+                <constraint firstItem="SCg-U9-jy6" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="tBC-Zf-H31"/>
+            </constraints>
+            <connections>
+                <outlet property="dimmedView" destination="SCg-U9-jy6" id="PoT-rH-Sdf"/>
+                <outlet property="lbDesc" destination="fco-aE-uch" id="vZx-N1-sAi"/>
+                <outlet property="lbDesc2" destination="pUN-iB-tTz" id="7Oc-4r-mM4"/>
+            </connections>
+            <point key="canvasLocation" x="460" y="246.9265367316342"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="btnCloseC" width="20" height="20"/>
+    </resources>
+</document>

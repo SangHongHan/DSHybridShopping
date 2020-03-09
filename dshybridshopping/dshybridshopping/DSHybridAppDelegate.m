@@ -7,12 +7,16 @@
 //
 
 #import "DSHybridAppDelegate.h"
+
+#import "MainViewController.h"
 #import "dshybridshopping.h"
 
 @interface DSHybridAppDelegate()
 {
     
 }
+
+@property (nonatomic, strong) MainViewController *mainController;
 
 @end
 
@@ -30,10 +34,10 @@
     }
     
     //Appkey
-    if (!dictInfoKey[@"AppKey"] || [dictInfoKey[@"AppKey"] isEqualToString:@""]) {
-        [NSException raise:kFrameworkName format:@"%@", @"DSHybridShopping키에 StartPage가 존재하지 않거나 값이 없습니다."];
-        return NO;
-    }
+//    if (!dictInfoKey[@"AppKey"] || [dictInfoKey[@"AppKey"] isEqualToString:@""]) {
+//        [NSException raise:kFrameworkName format:@"%@", @"DSHybridShopping키에 StartPage가 존재하지 않거나 값이 없습니다."];
+//        return NO;
+//    }
     
     //시작페이지
     if (!dictInfoKey[@"StartPage"] || [dictInfoKey[@"StartPage"] isEqualToString:@""]) {
@@ -53,12 +57,17 @@
         return NO;
     }
     
+    [SDKInfo sharedInstance].startPage = dictInfoKey[@"StartPage"];
+    [SDKInfo sharedInstance].appscheme = dictInfoKey[@"AppScheme"];
+    [SDKInfo sharedInstance].apiUrl = dictInfoKey[@"AppScheme"];
+    [SDKInfo sharedInstance].showIntro = dictInfoKey[@""];
+    
     // 윈도우 생성
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.backgroundColor = [UIColor whiteColor];
     
-//    self.mainController = [[MainViewController alloc] init];
-//    self.window.rootViewController = self.mainController;
+    self.mainController = [[MainViewController alloc] init];
+    self.window.rootViewController = self.mainController;
     [self.window makeKeyAndVisible];
     
     [[UIApplication sharedApplication] setApplicationIconBadgeNumber:0];
